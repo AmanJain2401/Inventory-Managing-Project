@@ -1,0 +1,13 @@
+body{
+    background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  
+  }
+  
+  
+  .my-card:hover{
+     transform:scale(1.1);
+     transition: 0.2s ease-in-out;
+  }

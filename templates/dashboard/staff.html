@@ -1,0 +1,45 @@
+{% extends 'partials/base.html' %}
+{% block title %}Staff Page{% endblock %}
+
+<!--Tables-->
+{% block content %}
+
+  
+  <!--TopSide-->
+  {% include 'partials/topnav.html' %}
+  <!--End Topnav-->
+
+   <div class="container">
+    <div class="row my-4">
+      <div class="col-md-4"></div>
+      <div class="col-md-8">
+        <table class="table">
+<thead class="bg-info">
+ <tr class="text-white">
+   <th scope="col">Profile</th>
+   <th scope="col">Name</th>
+   <th scope="col">Email</th>
+   <th scope="col">Phone</th>
+ </tr>
+</thead>
+<tbody class="bg-white">
+
+ {% for workers in workers %}
+ <tr>
+    <th scope="row">
+     <a class="btn btn-info btn-sm" href="{% url 'dashboard-staff-detail' workers.id%}">View</a>
+   </th>
+   <td>{{ workers.username }}</td>
+   <td>{{ workers.email }}</td>
+   <td>{{ workers.profile.phone }}</td>
+ </tr>
+ {% endfor %}
+
+</tbody>
+</table>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+<!--End Table-->
