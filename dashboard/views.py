@@ -9,6 +9,7 @@ from .forms import productForm,orderForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 
+#BY AMAN JAIN, BHASKARACHARYA COLLEGE OF APPLIED SCIENCES, DU
 # Create your views here.
 
 @login_required(login_url='user-login')
